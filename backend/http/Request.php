@@ -11,9 +11,11 @@ class Request extends ServerConfig {
         parent::__construct($server);
 
         $data = json_decode(file_get_contents('php://input'), true);
-        foreach ($data as $key => $value) {
-           $this->inputs[$key] = $value;
-           $this->{$key} = $value;
+        if($data) {
+            foreach ($data as $key => $value) {
+                $this->inputs[$key] = $value;
+                $this->{$key} = $value;
+             }
         }
     }
 

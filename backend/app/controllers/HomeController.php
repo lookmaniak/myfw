@@ -15,7 +15,7 @@ class HomeController {
         // Create a response array
         $responseArray = [
             'status' => 'success',
-            'message' => $request->input('id'),
+            'message' => $request->input('message'),
         ];
         
         return response()->body($responseArray); // Use the passed Response instance

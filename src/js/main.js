@@ -14,6 +14,8 @@ const App = {
             }
         }).then( req => {
             this.message = req.message
+        }).catch( err => {
+            this.message = err.response.message
         })
     },
     view: function()  {
