@@ -4,7 +4,7 @@ require locate('/app/models/Post.php');
 
 class PostController {
     public function index(Request $request) {
-        if($request->id) {
+        if(isset($request->id)) {
             $result = Post::find($request->id);
         } else {
             $result = Post::all();
@@ -19,7 +19,7 @@ class PostController {
 
     public function create(Request $request) {
         $result = Post::create([ 'content' => $request->input('message')]);
-        
+
         return response()->body([
             'status' => 'success',
             'message' => $result,

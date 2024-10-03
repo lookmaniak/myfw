@@ -1,7 +1,7 @@
 <?php
 
-require locate('/database/ConnectionPool.php');
-require locate('/helpers/string_literals.php');
+require locate('/framework/database/ConnectionPool.php');
+require locate('/framework/helpers/string_literals.php');
 
 class Model {
 

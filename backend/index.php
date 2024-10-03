@@ -1,8 +1,8 @@
 <?php
-require 'http/Route.php';
+require 'framework/http/Route.php';
+require 'framework/http/Response.php';
 require 'app/routes/api.php';
 require 'app/configs/database.php';
-require 'http/Response.php';
 require 'app/controllers/PostController.php';
 
 
@@ -33,7 +33,9 @@ function response() {
 }
 
 function locate($path) {
-    return dirname(__DIR__) .'/backend'. $path;
+    $target_path = '/backend\/'. $path;
+
+    return dirname(__DIR__) . str_replace('//', '/', $target_path);
 }
 
 Route::listen();

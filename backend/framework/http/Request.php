@@ -1,6 +1,6 @@
 <?php
 
-require locate('/http/ServerConfig.php');
+require locate('/framework/http/ServerConfig.php');
 
 #[AllowDynamicProperties]
 class Request extends ServerConfig {
