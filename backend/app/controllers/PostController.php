@@ -1,6 +1,6 @@
 <?php
 
-require locate('/app/models/Post.php');
+require_once locate('/app/models/Post.php');
 
 class PostController {
     public function index(Request $request) {
