@@ -1,13 +1,11 @@
 <?php
-require 'framework/http/Route.php';
-require 'framework/http/Response.php';
-require 'app/routes/api.php';
-require 'app/configs/database.php';
-require 'app/controllers/PostController.php';
-
-
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
+
+require 'framework/http/Route.php';
+require 'framework/http/Response.php';
+require 'app/configs/database.php';
+require 'app/routes/api.php';
 
 // Set the content type to JSON
 header('Content-Type: application/json');
