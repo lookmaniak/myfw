@@ -1,8 +1,9 @@
 <?php
 require 'http/Route.php';
 require 'app/routes/api.php';
+require 'app/configs/database.php';
 require 'http/Response.php';
-require 'app/controllers/HomeController.php';
+require 'app/controllers/PostController.php';
 
 
 ini_set('display_errors', 1);

@@ -6,16 +6,25 @@ const App = {
     message: null,
     oninit: function() {
         m.request({
-            method: 'POST',
-            url: getUrl('home'),
+            method: 'GET',
+            url: getUrl('posts?id=6'),
+            headers: {
+                'Accept' : 'application/json'
+            },
             body: {
-                message: 'Hello server, i mean to be hello!',
+                message: 'Hello world!',
                 id: 50, 
             }
         }).then( req => {
-            this.message = req.message
+            if(!req) {
+                console.log(req)
+
+            }
+
+
         }).catch( err => {
-            this.message = err.response.message
+                console.log(err)
+                this.message = err.response?.message ?? err
         })
     },
     view: function()  {

@@ -17,6 +17,11 @@ class Request extends ServerConfig {
                 $this->{$key} = $value;
              }
         }
+
+        foreach($_GET as $key => $value) {
+            $this->inputs[$key] = $value;
+            $this->{$key} = $value;
+        }
     }
 
 
